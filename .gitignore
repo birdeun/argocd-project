@@ -1,0 +1,21 @@
+# Node
+node_modules/
+dist/
+build/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Frontend source (이미 도커이미지로 올렸으니 불필요)
+frontend/src/
+server/src/
+service/src/
+
+# Logs
+*.log
+
+# OS junk
+.DS_Store
+Thumbs.db

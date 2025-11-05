@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: crayon-server
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: crayon-server
+  template:
+    metadata:
+      labels:
+        app: crayon-server
+    spec:
+      containers:
+        - name: crayon-server
+          image: senre/crayon-auth:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8000
+          env:
+            - name: NODE_ENV
+              value: "production"
+          resources:
+            requests:
+              cpu: 100m
+              memory: 128Mi
+            limits:
+              cpu: 200m
+              memory: 256Mi
