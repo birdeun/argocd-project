@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: crayon-frontend
-  namespace: default
+  name: senre-frontend
+  namespace: frontend-ns
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: crayon-frontend
+      app: senre-frontend
   template:
     metadata:
       labels:
-        app: crayon-frontend
+        app: senre-frontend
     spec:
       containers:
-        - name: crayon-frontend
+        - name: senre-frontend
           image: senre/crayon-frontend:latest
           imagePullPolicy: Always
           ports:

@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: crayon-server
-  namespace: default
+  name: senre-server
+  namespace: server-ns
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: crayon-server
+      app: senre-server
   template:
     metadata:
       labels:
-        app: crayon-server
+        app: senre-server
     spec:
       containers:
-        - name: crayon-server
+        - name: senre-server
           image: senre/crayon-auth:latest
           imagePullPolicy: Always
           ports:
