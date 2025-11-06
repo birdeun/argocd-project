@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: senre-frontend
-          image: senre/crayon-frontend:latest
+          image: senre/crayon-frontend:v2
           imagePullPolicy: Always
           ports:
             - containerPort: 3000

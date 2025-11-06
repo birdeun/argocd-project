@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: senre-service
-          image: senre/crayon-service:latest
+          image: senre/crayon-service:v2
           imagePullPolicy: Always
           ports:
             - containerPort: 9000
